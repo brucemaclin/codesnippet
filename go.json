@@ -1,0 +1,111 @@
+{
+	// Place your snippets for go here. Each snippet is defined under a snippet name and has a prefix, body and 
+	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the 
+	// same ids are connected.
+	// Example:
+	// "Print to console": {
+	// 	"prefix": "log",
+	// 	"body": [
+	// 		"console.log('$1');",
+	// 		"$2"
+	// 	],
+	// 	"description": "Log output to console"
+	// }
+	"print to func":{
+		"prefix": "fn",
+		"body": [
+			"func $1($2) {\r\n}"
+		]
+	},
+	"new make":{
+		"prefix": "mk",
+		"body": [
+			"make($1,$2)"
+		]
+	},
+	"new make chan":{
+		"prefix": "mkc",
+		"body": [
+			"make(chan $1,$2)"
+		]
+	},
+	"if err":{
+		"prefix": "irer",
+		"body": [
+			"if err = $1 ;err != nil{\r\n}"
+		]
+	},
+	"if ret":{
+		"prefix": "ifre",
+		"body": [
+			"if ret =$1;ret != success{\r\n} "
+		]
+	},
+	"time duration":{
+		"prefix": "tdu",
+		"body": [
+			"time.Duration($1)"
+		]
+	},
+	"time second":{
+		"prefix": "tse",
+		"body": [
+			"time.Second*$1"
+		]
+	},
+	"debug":{
+		"prefix": "Dg",
+		"body": [
+			"Debug(\"$1\")"
+		]
+	},
+	"error":{
+		"prefix": "Er",
+		"body": [
+			"Error(\"$1\")"
+		]	
+	},
+	"config":{
+		"prefix": "Cg",
+		"body": [
+			"Config"
+		]
+	},
+	"simplejson new":{
+		"prefix": "snj",
+		"body": [
+			"js,err := simplejson.NewJson($1)"
+		]
+	},
+	"for i":{
+		"prefix": "fori",
+		"body": [
+			"for i:=0;i<$1;i++{\r\n}"
+		]
+	},
+	"jsi":{
+		"prefix": "jsi",
+		"body": [
+			"js.GetIndex(i).Get($1)"
+		]
+	},
+	"byte array":{
+		"prefix": "ba",
+		"body": [
+			"[]byte($1)"
+		]
+	},
+	"fork":{
+		"prefix": "fork",
+		"body": [
+			"for k,v := range $1 {\r\n}"
+		]
+	},
+	"htt":{
+		"prefix": "htt",
+		"body": [
+			"http.Transport{DisableKeepAlives: true, Dial: dialTimeout, TLSClientConfig: &tls.Config{InsecureSkipVerify: true}}"
+		]
+	}
+}
